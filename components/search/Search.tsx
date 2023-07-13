@@ -14,7 +14,7 @@ const Search = () => {
 	setIsLoading(true)
   
 	const query = new URLSearchParams({ query: inputRef.current.value })
-	const projectUrl = `https://jisigtwwxceaauhsoksi.supabase.co`
+	const projectUrl = `https://jisigtwwxceaauhsoksi.supabase.co/functions/v1/vector-search`
 	const queryURL = `${projectUrl}/${query}`
 	const eventSource = new EventSource(queryURL)
   
