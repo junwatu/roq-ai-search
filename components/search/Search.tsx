@@ -12,8 +12,10 @@ const Search = () => {
 	e.preventDefault()
 	setAnswer("")
 	setIsLoading(true)
-  
-	const query = new URLSearchParams({ query: inputRef.current.value })
+    
+	console.log(inputRef.current.value)
+
+	const query = new URLSearchParams({ query: inputRef.current!.value })
 	const projectUrl = `https://jisigtwwxceaauhsoksi.supabase.co/functions/v1/vector-search`
 	const queryURL = `${projectUrl}/${query}`
 	const eventSource = new EventSource(queryURL)
